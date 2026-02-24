@@ -37,7 +37,7 @@ function renderUI() {
     console.log(boxen(chalk.bold.green("BITUNIX FUTURES TRADING BOT"), { padding: 1, margin: 1, borderStyle: "double" }));
 
     const balanceTable = new Table({
-        style: { 'padding-left': 0, 'padding-right': 0, border: [], header: [] }, // Remove padding and borders
+        style: { 'padding-left': 0, 'padding-right': 0, border: [], header: [] },
         chars: { 'top': '─' , 'top-mid': '┬' , 'top-left': '┌' , 'top-right': '┐'
          , 'bottom': '─' , 'bottom-mid': '┴' , 'bottom-left': '└' , 'bottom-right': '┘'
          , 'left': '│' , 'left-mid': '├' , 'mid': '─' , 'mid-mid': '┼'
@@ -47,7 +47,7 @@ function renderUI() {
 
     balanceTable.push(
         [{ colSpan: 2, content: chalk.bold("ACCOUNT BALANCE"), hAlign: "center" }],
-        [{ colSpan: 2, content: "", hAlign: "center" }], // Separator
+        [{ colSpan: 2, content: "", hAlign: "center" }],
         [chalk.white("Free Balance:"), chalk.yellow(`${uiData.accountBalance.freeBalance} ${uiData.accountBalance.marginCoin}`)],
         [chalk.white("Locked Balance:"), chalk.yellow(`${uiData.accountBalance.lockedBalance} ${uiData.accountBalance.marginCoin}`)],
         [chalk.white("Margin Balance:"), chalk.yellow(`${uiData.accountBalance.marginBalance} ${uiData.accountBalance.marginCoin}`)],
@@ -67,7 +67,7 @@ function renderUI() {
 
     statusTable.push(
         [chalk.white("Current Symbol:"), chalk.cyan(uiData.currentSymbol)],
-        [chalk.white("Current Price:"), chalk.hex("#FFA500")(uiData.currentPrice)], // Orange color
+        [chalk.white("Current Price:"), chalk.hex("#FFA500")(uiData.currentPrice)],
         [chalk.white("Last Price Change:"), chalk.magenta(uiData.lastPriceChange)],
         [chalk.white("API Status:"), uiData.apiStatus === "OK" ? chalk.green(uiData.apiStatus) : chalk.red(uiData.apiStatus)],
         [chalk.white("Internet Status:"), uiData.internetStatus === "OK" ? chalk.green(uiData.internetStatus) : chalk.red(uiData.internetStatus)],
