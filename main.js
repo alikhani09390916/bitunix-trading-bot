@@ -2,7 +2,7 @@ const { initUI, updateUI } = require('./ui/terminalUI');
 const { getMarketPrice } = require('./services/marketService');
 const { getAccountBalance, placeFuturesOrder } = require('./services/tradeService');
 const { setupConfig } = require('./config/config');
-const { setupLogging } = require('./utils/logger');
+const { getLogger, setupLogging } = require('./utils/logger');
 const { healthCheckLoop } = require('./utils/healthMonitor');
 
 async function startBot() {
